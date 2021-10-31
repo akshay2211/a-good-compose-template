@@ -1,4 +1,4 @@
-package io.ak1.userlist
+package io.ak1.template
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

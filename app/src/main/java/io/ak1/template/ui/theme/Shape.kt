@@ -1,4 +1,4 @@
-package io.ak1.userlist.ui.theme
+package io.ak1.template.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

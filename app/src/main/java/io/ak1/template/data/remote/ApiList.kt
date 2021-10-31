@@ -1,6 +1,6 @@
-package io.ak1.userlist.data.remote
+package io.ak1.template.data.remote
 
-import io.ak1.userlist.models.BaseData
+import io.ak1.template.models.BaseData
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -12,7 +12,7 @@ import retrofit2.http.Query
 interface ApiList {
 
     @GET("users?delay=3")
-    suspend fun getUserList(
+    suspend fun getTemplate(
         @Query("page") page: Int = 1,
         @Query("per_page") per_page: Int = 3
     ): Response<BaseData>

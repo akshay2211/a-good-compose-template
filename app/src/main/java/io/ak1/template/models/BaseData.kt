@@ -1,4 +1,4 @@
-package io.ak1.userlist.models
+package io.ak1.template.models
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

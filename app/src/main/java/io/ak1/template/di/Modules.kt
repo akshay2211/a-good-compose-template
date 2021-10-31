@@ -1,4 +1,4 @@
-package io.ak1.userlist.di
+package io.ak1.template.di
 
 import org.koin.android.ext.koin.androidApplication
 import org.koin.dsl.module
@@ -26,5 +26,6 @@ var repoModule = module {
     single { getCoroutineContext() }
 }
 
+/*
 var viewModelModule = module {
-}
+}*/

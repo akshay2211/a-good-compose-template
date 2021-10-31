@@ -1,10 +1,7 @@
-package io.ak1.userlist
+package io.ak1.template
 
 import androidx.multidex.MultiDexApplication
-import io.ak1.userlist.di.databaseModule
-import io.ak1.userlist.di.networkModule
-import io.ak1.userlist.di.repoModule
-import io.ak1.userlist.di.viewModelModule
+import io.ak1.template.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -21,7 +18,7 @@ class App : MultiDexApplication() {
             androidContext(applicationContext)
             // use Android logger - Level.INFO by default
             // androidLogger(Level.DEBUG)
-            koin.loadModules(listOf(databaseModule, networkModule, viewModelModule, repoModule))
+            koin.loadModules(listOf(databaseModule, networkModule, /*viewModelModule,*/ repoModule))
         }
     }
 }

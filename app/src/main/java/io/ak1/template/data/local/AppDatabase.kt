@@ -1,8 +1,8 @@
-package io.ak1.userlist.data.local
+package io.ak1.template.data.local
 
 import androidx.paging.DataSource
 import androidx.room.*
-import io.ak1.userlist.models.User
+import io.ak1.template.models.User
 
 /**
  * Created by akshay on 27/10/21
@@ -17,10 +17,10 @@ abstract class AppDatabase : RoomDatabase() {
 @Dao
 interface UserDao {
     @Query("SELECT * FROM user_table ORDER BY id ASC")
-    fun getUserList(): DataSource.Factory<Int, User>
+    fun getTemplate(): DataSource.Factory<Int, User>
 
     @Query("SELECT * FROM user_table ORDER BY id ASC")
-    fun getUserListSimple(): List<User>
+    fun getTemplateSimple(): List<User>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(images: List<User>)

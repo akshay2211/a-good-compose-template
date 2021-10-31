@@ -1,10 +1,10 @@
-package io.ak1.userlist.di
+package io.ak1.template.di
 
 import android.content.Context
 import androidx.room.Room
-import io.ak1.userlist.BuildConfig
-import io.ak1.userlist.data.local.AppDatabase
-import io.ak1.userlist.data.remote.ApiList
+import io.ak1.template.BuildConfig
+import io.ak1.template.data.local.AppDatabase
+import io.ak1.template.data.remote.ApiList
 import kotlinx.coroutines.Dispatchers
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

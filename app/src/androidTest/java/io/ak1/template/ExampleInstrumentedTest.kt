@@ -1,4 +1,4 @@
-package io.ak1.userlist
+package io.ak1.template
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
@@ -17,6 +17,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("io.ak1.userlist", appContext.packageName)
+        assertEquals("io.ak1.template", appContext.packageName)
     }
 }

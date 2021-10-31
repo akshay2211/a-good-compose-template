@@ -1,4 +1,4 @@
-package io.ak1.userlist.ui.theme
+package io.ak1.template.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
