@@ -22,10 +22,4 @@ data class User(
     @PrimaryKey
     @SerializedName("id")
     var id: Int = 0
-
-    @SerializedName("page_num")
-    var pageNum: Int = 0
-
-    @SerializedName("total_page")
-    var totalPage: Int = 0
 }
