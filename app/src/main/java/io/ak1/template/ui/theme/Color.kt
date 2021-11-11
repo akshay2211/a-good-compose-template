@@ -2,6 +2,7 @@ package io.ak1.template.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Teal200 = Color(0xFF03DAC5)
-val White200 = Color(0xFFf3f3f3)
-val Black200 = Color(0xFF121212)
+val Red = Color.Red
+val White = Color(0xFFFFFFFF)
+val Black = Color(0xFF121212)
+val Grey = Color(0xFF888888)

@@ -9,7 +9,6 @@ import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.view.WindowInsetsControllerCompat
@@ -25,20 +24,23 @@ val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "se
 val themePreferenceKey = intPreferencesKey("list_theme")
 
 private val DarkColorPalette = darkColors(
-    primary = Black200,
-    primaryVariant = Color.Gray,
-    secondaryVariant = Color.White,
-    secondary = Teal200,
-    onPrimary = Color.White,
-    onSecondary = Black200,
+    primary = White,
+    primaryVariant = Grey,
+    secondaryVariant = White,
+    secondary = Red,
+    onPrimary = Black,
+    onSecondary = Black,
+    background = Black
 )
 
 private val LightColorPalette = lightColors(
-    primary = Color.White,
-    primaryVariant = Color.Gray,
-    secondaryVariant = Color.Black,
-    secondary = White200,
-    onPrimary = Color.Black,
+    primary = Black,
+    primaryVariant = Grey,
+    secondaryVariant = Black,
+    secondary = Red,
+    onPrimary = White,
+    onSecondary = White,
+    background = White
 
     /* Other default colors to override
     background = Color.White,
@@ -49,6 +51,7 @@ private val LightColorPalette = lightColors(
     onSurface = Color.Black,
     */
 )
+
 
 @Composable
 fun TemplateTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
@@ -95,5 +98,5 @@ fun isSystemInDarkThemeCustom(): Boolean {
 fun Window.statusBarConfig(darkTheme: Boolean) {
     WindowInsetsControllerCompat(this, this.decorView).isAppearanceLightStatusBars =
         !darkTheme
-    this.statusBarColor = MaterialTheme.colors.primary.toArgb()
+    this.statusBarColor = MaterialTheme.colors.background.toArgb()
 }
