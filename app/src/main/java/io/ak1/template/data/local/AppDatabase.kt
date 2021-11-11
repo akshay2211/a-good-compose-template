@@ -25,9 +25,6 @@ interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(images: List<User>)
 
-    @Query("SELECT MAX(pageNum) FROM user_table")
-    fun getNextPage(): Int
-
     @Query("DELETE FROM user_table")
     suspend fun deleteTable()
 
